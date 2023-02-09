@@ -3,9 +3,6 @@
 			padding: 0;
 			box-sizing: border-box;
 		}
-		body{
-			/*position: relative;*/
-		}
 		header{
 			background: white;
 			padding: 20px 80px;
@@ -17,17 +14,24 @@
 			display: flex;
 			align-items: center;
 		}
-		header nav  li{
+		header ul{
 			list-style-type: none;
-			display: inline-block;
-			padding-left: 10px; 
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
 		}
-		header nav a{
-			padding-left: 10px;
-			text-decoration: none;
-			color: #333;
+		header li{
+			float: left;
+			padding: 0 10px
+		}
+		header li a{
+			display: block;
+    		text-align: center;
+    		padding: 4px 16px;
+    		text-decoration: none;
+    		color: #333;
 			font-size: 1.2em;
-			transition:.4s ;
+			transition:.4s 
 		}
 		header nav a:hover{
 			background-color: red;
@@ -60,6 +64,9 @@
 			background-color: black;
 			margin: 8px 0;
 			
+		}
+		.container{
+			position: absolute;
 		}
 		.row{
 			
@@ -153,7 +160,10 @@
    			color:#22252e;
    			letter-spacing: 1px;
    			font-weight: 700;
-   			margin: 0px;
+   			margin-bottom: 0px;
+		}
+		.courses-header h2{
+			margin-bottom: 22px;
 		}
 		.courses-header p{
 		    font-size: 1rem;
@@ -172,8 +182,8 @@
         	margin: 20px 0px !important;
         	padding: 0px 20px;
         	flex-grow: 1;
-    }
-
+        }
+	
 		.courses .box{
 			display: flex;
     		flex-direction: column;
@@ -225,17 +235,96 @@
 			box-shadow: 5px 10px 30px rgba(90,118,253,0.5);
     		transition: all ease 0.3s;
 		}
+		.courses .box img{
+			margin-bottom: 30px;
+		}
+		.about-uni{
+			display: flex;
+			justify-content: space-between;
+			margin: 25px;
+			padding-left: 120px;
+		}
+		.left-uni-section-container{
+			width: 500px
+		}
+		.left-uni-section{
+			padding: 20px;
+			width: 50%;
+		}
+		.about-uni h1{
+			font-size: 2.2rem;
+			margin-bottom: 20px
+		}
+		.about-uni .info-box{
+			border-left: 4px solid gold;
+			/*width: 400px*/;
+			/*margin-left: 8px;*/
+			line-height: 25px;
+			margin-bottom: 30px;
+		}
+		.about-uni .info-box p{
+			padding-left: 10px;
+		}
+		.about-uni p{
+			margin-bottom: 20px
+		}
+		.about-uni button{
+			padding: 10px 20px;
+			color: white;
+			background-color: chocolate;
+			border-radius: 8px;
+		}
+		.right-uni-section{
+			width: 50%
+		}
+		.right-uni-section img{
+			width: 50%;
+			height: 60vh;
+			margin-left: 140px;
+			border-radius: 12px;
+		}
+
+
+
+
+
+
+
 		footer p{
 			text-align: center;
 			font-weight: bold;
 			margin-bottom: 20px;
 		}
+		@media(max-width:1022px){
+			.row{
+				height: 800px;
+				transition: .4s
+			}
+		}
 		@media(max-width:1021px){
 			nav ul li{
-				display: none;
+				float: none
+			}
+			nav ul li a{
+				font-size: 1.3rem;
+				padding-top: 10px;
+			}
+			nav ul{
+				width: 100%;
+				height: 0;
+				background: linear-gradient(#ff54a2, #ff575a);
+				position: absolute;
+				top: 70px;
+				right: 0;
+				margin-bottom: 30px;
+				transition: .4s
 			}
 			.menu-btn{
 				display: block;
+			}
+			.row{
+				height: 500px;
+				transition: .4s
 			}
 			main{
 				display: flex;
@@ -246,16 +335,32 @@
 				flex-basis: 40%;
 				color: white;
 				text-align: center;
+				transition: .4s
 			}
-			.right-section{
+		/*	.right-section{
 				width: 80%;
 				margin-top:50px;
 				display: flex;
 				justify-content: center;
-			}
+			}*/
 			.right-section img{
-				width: 20px;
+				display: none
 
 			}
+			.right-section marquee{
+				display: none
+			}
+			.courses-header h2{
+				margin-bottom: 22px;
+				font-size: 2.3rem;
+			}
+			.courses-header p{
+				font-size: 1.3rem;
+			}
+			.about-uni .right-uni-section img{
+				height: 100%;
+			}
+
+
 		}
 

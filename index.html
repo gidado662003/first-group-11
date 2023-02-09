@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="index1.css">
 </head>
 <body>
 	<header>
@@ -20,7 +20,7 @@
 					<li><a href="#">Apply Now</a></li>
 					<li><a href="#" id="login">Login</a></li>
 				</ul>	
-				<div class="menu-btn">
+				<div class="menu-btn" onclick="toggleMenu()">
 						<div class="menu-btn-btn"></div>
 						<div class="menu-btn-btn"></div>
 						<div class="menu-btn-btn"></div>
@@ -28,6 +28,7 @@
 			</nav>			
 		</div>
 	</header>
+
 	<div class="row">
 		<main>
 			<section>
@@ -55,7 +56,7 @@
 			<div class="box-container">
 
 				<div class="box">
-                	<!-- <img src="icon5.png"> -->
+                	<img src="icon5.png">
                 	<font>Bachelor of Computer Application</font>
                 	<p>This is a 3-year (6 semesters) programme for undergraduates seeking career in the it industry</p>
                	 	<!--btn--------->
@@ -63,7 +64,7 @@
              	</div>
 
               	<div class="box">
-                	<!-- <img src="icon5.png"> -->
+                	<img src="icon5.png">
                 	<font>Bio-Technology</font>
                	 	<p>This is a 3 years undergraduate course that allows the candidate to learn how technology is utilized</p>
                 	<!--btn--------->
@@ -71,7 +72,7 @@
              	</div>
 
               	<div class="box">
-                	<!-- <img src="icon5.png"> -->
+                	<img src="icon5.png">
                 	<font>Bachelor of Business Administration</font>
                 	<p>This is a branch of business & Managment that will teach you how to lead a company or business venture</p>
                 	<!--btn--------->
@@ -79,7 +80,7 @@
              	</div>
 
               	<div class="box">
-                	<!-- <img src="icon5.png"> -->
+                	<img src="icon5.png">
                 	<font>Computer Science</font>
                 	<p>With the BSc computer science you can apply for a range of computational and amthematical jobs in creative industries</p>
                 	<!--btn--------->
@@ -88,8 +89,119 @@
 			</div>
 			 
 	</section>
+	<section class="about-uni">
+		<div class="left-uni-section">
+			<div class="left-uni-section-container">
+				<h1>
+				Welcome to the University 
+			</h1>		
+			<div class="info-box">
+				<p>
+					Solve critical and complete global problems with the help of quality education
+				</p>
+			</div>	
+			<p>
+				We are the leading academic institution offering diffrent programs and high education diplomas that are designed with global requirements on mind
+			</p>
+			<p>
+				Each year over 1000+ students graduate from our institution.We are the number 1 institution in the country and we are providing the quality education with more than 50 years
+			</p>
+			<a href="#"><button>Learn More</button></a>
+			</div>
+			
+		</div>
+
+		<div class="right-uni-section">
+			<img src="tee.jpg">			
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<footer>
 		<p>Copyright(C)-2023 | Developed By Group 11</p>		
 	</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		let meun = document.querySelector("ul");
+		let body = document.querySelector(".left-section");
+		let main = document.querySelector(".row")
+		// meun.style.height = "0px"
+		function toggleMenu(){
+			if (meun.style.height == "0px"){
+				meun.style.height  = "300px";
+				main.style.height = "700px"	;
+				body.style.marginTop = "190px"
+			}else{
+				meun.style.height = "0px";
+				main.style.height = "500px";
+				body.style.marginTop = "0px"
+			}
+			console.log(meun.style.height)
+		}
+	</script>
 </body>
 </html>
